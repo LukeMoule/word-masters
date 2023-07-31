@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+header{
+    border-bottom-style: solid;
+    margin-bottom: 50px;
+}
+.game{
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.letter-box{
+    width: 45px;
+    height: 45px;
+    border: solid;
+    border-color: gainsboro;
+    border-width: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.word-row{
+    width: 270px;
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.result{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.correct {
+    background-color: green;
+    color: whitesmoke;
+}
+
+.close {
+    background-color: rgb(209, 189, 4);
+    color: whitesmoke;
+}
+
+.wrong {
+    background-color: grey;
+    color: whitesmoke;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.bounce{
+    animation: bounce 1s 1 ease;
+}
+
+.shake{
+    animation: shake 0.1s 2 linear;
+}
+
+@keyframes bounce {
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    25%{
+        transform: translateX(-5px);
+    }
+    75%{
+        transform: translateX(5px);
+    }
+}
